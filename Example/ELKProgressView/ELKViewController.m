@@ -38,7 +38,7 @@
     [super viewDidLoad];
     progress = 0;
 
-    self.ringView = [[ELKProgressRingView alloc] initWithFrame:CGRectMake((ELKScreenWidth - 100)/2, 100, 100, 100)];
+    self.ringView = [[ELKProgressRingView alloc] initWithFrame:CGRectMake((ELKScreenWidth - 15)/2, 100, 15, 15)];
 //    self.ringView.center = self.view.center;
     self.ringView.progressRingWidth = 2;
     self.ringView.backgroundRingWidth = 2;
@@ -48,6 +48,7 @@
     /// 环形进度条中间的文字和图片是互斥的 centerImage有值,则隐藏文字
     self.ringView.centerImage = [UIImage imageNamed:@"icon_down"];
     self.ringView.showPercentage = YES;
+    self.ringView.indeterminate = YES;
     [self.view addSubview:self.ringView];
 
     
